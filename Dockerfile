@@ -11,7 +11,7 @@ RUN pacman-key --recv-key 666411233117519B --keyserver keyserver.ubuntu.com && \
     echo "[nabu-alarm]" >> /etc/pacman.conf && \
     echo "SigLevel = Required DatabaseOptional" >> /etc/pacman.conf && \
     echo "Server = https://nabu-alarm.github.io/repo" >> /etc/pacman.conf && \
-    pacman -Sy --noconfirm nabu-alarm-keyring && \
+    pacman -Sy --noconfirm nabu-alarm-keyring base-devel && \
     pacman-key --populate
     
 
